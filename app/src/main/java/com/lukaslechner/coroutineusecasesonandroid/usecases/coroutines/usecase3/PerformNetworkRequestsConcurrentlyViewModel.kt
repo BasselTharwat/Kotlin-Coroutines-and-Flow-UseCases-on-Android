@@ -44,9 +44,5 @@ class PerformNetworkRequestsConcurrentlyViewModel(
         }catch(exception: Exception) {
             uiState.value = UiState.Error("Network request failed!")
         }
-
-
-
-
     }
 }
