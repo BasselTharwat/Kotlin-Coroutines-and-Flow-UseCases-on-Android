@@ -18,4 +18,18 @@ fun main(){
             delay(200)
         }
     }
+
+    scope.launch {
+        sharedFlow.collect{
+            println("Collected from 1: $it")
+        }
+    }
+
+    scope.launch {
+        sharedFlow.collect{
+            println("Collected from 2: $it")
+        }
+    }
+
+    Thread.sleep(2000)
 }
